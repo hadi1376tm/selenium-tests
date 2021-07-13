@@ -1,0 +1,677 @@
+{
+  "id": "767cee5f-6cc7-4abf-9833-bcd0adc434fe",
+  "version": "2.0",
+  "name": "digi",
+  "url": "https://www.digikala.com",
+  "tests": [{
+    "id": "e6d592b0-bf05-4bff-9aff-edd868857450",
+    "name": "1",
+    "commands": [{
+      "id": "0ac07294-27b8-4890-8053-7948bc4694dc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9865955-348a-4c5c-9da4-0f84f8a31ed8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03272dd4-8986-4d2d-9e26-6c0d9788a0fe",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.js-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25003067-82ac-45ce-8234-a5ea128ab382",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.js-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "قلم"
+    }, {
+      "id": "7481b2fd-c478-42f0-8e5a-0b72ecbf3530",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.js-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "81dbbf27-1e22-4dcb-a2f3-0cb3e4bac642",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "page"
+    }, {
+      "id": "a2010cdf-6c99-4d3a-acec-058ad9626d00",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "contain_ERRORS"
+    }, {
+      "id": "7208f165-ec1d-4108-95ac-df53dd9d8eb8",
+      "comment": "",
+      "command": "while",
+      "target": "${page}<6",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a511904a-8272-41d7-8f3b-81943eec7faf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "item"
+    }, {
+      "id": "c268add2-f650-4e68-ba4e-a5b76c2e8706",
+      "comment": "",
+      "command": "while",
+      "target": "${item}<36",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ebe794f-f2ca-4a59-973c-929df9204c23",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=li:nth-child(${item}) .c-product-box__content .js-product-url",
+      "targets": [
+        ["linkText=قلم لمسی مدل PK-024", "linkText"],
+        ["css=li:nth-child(1) .c-product-box__content .js-product-url", "css:finder"],
+        ["xpath=//a[contains(text(),'قلم لمسی مدل PK-024')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/ul/li/div/div[3]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/product/dkp-4939818/قلم-لمسی-استایلوس-مدل-pk-024')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'قلم لمسی مدل PK-024')]", "xpath:innerText"]
+      ],
+      "value": "name"
+    }, {
+      "id": "47420657-df1a-4167-998a-05cd88b07cfa",
+      "comment": "",
+      "command": "if",
+      "target": "${name}.includes('قلم')",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "433b63ad-eb04-4b38-8c6e-f646c9cfe159",
+      "comment": "",
+      "command": "echo",
+      "target": "page(${page}) item ${item} contains keyword : YES",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92454056-b45c-4f3a-9f47-cdf815fbd955",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ff6740f-3030-4426-8003-873b6aa30bc9",
+      "comment": "",
+      "command": "echo",
+      "target": "page(${page}) item ${item} contains keyword : NO",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "513f5ae6-56c9-4846-824a-54360e01716a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${contain_ERRORS}+1",
+      "targets": [],
+      "value": "contain_ERRORS"
+    }, {
+      "id": "db7528c4-fbe3-41bc-81b5-3a937fe7937c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5afc6c1-065d-48b4-8038-f9db5597fe9a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${item}+1",
+      "targets": [],
+      "value": "item"
+    }, {
+      "id": "6c0dc983-1214-4e8b-a345-e5521d860417",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edb51ff1-fa2c-465c-b806-86bb516a7172",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${page}+1",
+      "targets": [],
+      "value": "page"
+    }, {
+      "id": "4be9493d-57eb-4f9a-8138-fb44d6f3d8ed",
+      "comment": "",
+      "command": "if",
+      "target": "${page}<6",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cac1f66b-3efd-4b11-a9e7-4a9ec1f8f292",
+      "comment": "",
+      "command": "echo",
+      "target": "go to page ${page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f6bb235-2ec2-4f29-9ea8-4bdee94e73a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-pagination__item:nth-child(${page}) > .c-pager__item",
+      "targets": [
+        ["linkText=۲", "linkText"],
+        ["css=.js-pagination__item:nth-child(2) > .c-pager__item", "css:finder"],
+        ["xpath=//a[contains(text(),'۲')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/div[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/search/?q=%D9%82%D9%84%D9%85&sortby=22&pageno=2')]", "xpath:href"],
+        ["xpath=//article/div/div[3]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d78da8cf-ae59-4249-a02f-d360487d9f02",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5742565-cb4a-4b99-a79e-88269810ac92",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccbe2919-27aa-4816-9e33-10a85a939749",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45344ee8-e8b5-4f47-932f-f44f2b74b2ce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=گران‌ترین",
+      "targets": [
+        ["linkText=گران‌ترین", "linkText"],
+        ["css=.c-listing__sort > li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'گران‌ترین')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/div[2]/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:')])[7]", "xpath:href"],
+        ["xpath=//article/div/div[2]/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'گران‌ترین')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b8be07e-6d76-488f-ad44-a76a2a00e9b7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "page"
+    }, {
+      "id": "8265055b-6e02-4b7d-b098-a22f2696ed21",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "order_ERRORS"
+    }, {
+      "id": "80ac3376-5615-42d4-bf4d-a48ce2ab2243",
+      "comment": "",
+      "command": "while",
+      "target": "${page}<6",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21696891-8f46-49d9-9650-d1a05cd4cf5a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "item1"
+    }, {
+      "id": "a1108cb8-8e44-4c69-831a-86f6a06d6e0b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 2",
+      "targets": [],
+      "value": "item2"
+    }, {
+      "id": "c266d2fd-92d4-4b90-ae81-ca5dc97beee0",
+      "comment": "",
+      "command": "while",
+      "target": "${item2}<36",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68b4b6b6-c07b-4353-b1bd-006b05333b10",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=li:nth-child(${item1}) .c-price__value-wrapper",
+      "targets": [
+        ["css=li:nth-child(2) .c-price__value-wrapper", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/ul/li[2]/div/div[3]/div[3]/div/div/div", "xpath:idRelative"],
+        ["xpath=//li[2]/div/div[3]/div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": "tmp1"
+    }, {
+      "id": "def45a49-8856-4e95-b2e3-a6f404fefbc3",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=li:nth-child(${item2}) .c-price__value-wrapper",
+      "targets": [
+        ["css=li:nth-child(2) .c-price__value-wrapper", "css:finder"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/ul/li[2]/div/div[3]/div[3]/div/div/div", "xpath:idRelative"],
+        ["xpath=//li[2]/div/div[3]/div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": "tmp2"
+    }, {
+      "id": "81244eaf-239c-4a8d-9d59-e8fb51e96293",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var persianNumbers = [/۰/g, /۱/g, /۲/g, /۳/g, /۴/g, /۵/g, /۶/g, /۷/g, /۸/g, /۹/g], arabicNumbers  = [/٠/g, /١/g, /٢/g, /٣/g, /٤/g, /٥/g, /٦/g, /٧/g, /٨/g, /٩/g]; var str = ${tmp1};    if(typeof str === 'string')   {     for(var i=0; i<10; i++)     {       str = str.replace(persianNumbers[i], i).replace(arabicNumbers[i], i);     }   }   return str;",
+      "targets": [],
+      "value": "tmp1"
+    }, {
+      "id": "4a18ec75-16e9-437b-afee-8a9399569878",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var persianNumbers = [/۰/g, /۱/g, /۲/g, /۳/g, /۴/g, /۵/g, /۶/g, /۷/g, /۸/g, /۹/g], arabicNumbers  = [/٠/g, /١/g, /٢/g, /٣/g, /٤/g, /٥/g, /٦/g, /٧/g, /٨/g, /٩/g]; var str = ${tmp2};    if(typeof str === 'string')   {     for(var i=0; i<10; i++)     {       str = str.replace(persianNumbers[i], i).replace(arabicNumbers[i], i);     }   }   return str;",
+      "targets": [],
+      "value": "tmp2"
+    }, {
+      "id": "c9a0265c-9af8-4346-a094-f1a232c80322",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var str = ${tmp1}; return(str.replace(\",\", \"\"));",
+      "targets": [],
+      "value": "tmp1"
+    }, {
+      "id": "061e9496-794d-4b7a-8570-f7f128709536",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var str = ${tmp1}; return(str.replace(\",\", \"\"));",
+      "targets": [],
+      "value": "tmp1"
+    }, {
+      "id": "86459656-a80f-47ac-912d-3bb921f56ccb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var str = ${tmp2}; return(str.replace(\",\", \"\"));",
+      "targets": [],
+      "value": "tmp2"
+    }, {
+      "id": "c96e2e5d-dfbc-417c-b18f-5a4996f82721",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var str = ${tmp2}; return(str.replace(\",\", \"\"));",
+      "targets": [],
+      "value": "tmp2"
+    }, {
+      "id": "06b1f041-b699-46dc-8a36-99e88953fe70",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var str = ${tmp1}; return(str.replace(\" تومان\", \"\"));",
+      "targets": [],
+      "value": "price1"
+    }, {
+      "id": "dea11969-e46c-4fdd-8fed-6961b0518a3a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var str = ${tmp2}; return(str.replace(\" تومان\", \"\"));",
+      "targets": [],
+      "value": "price2"
+    }, {
+      "id": "a1990370-c7c3-4599-8898-5c6c0db43345",
+      "comment": "",
+      "command": "echo",
+      "target": "first item price: ${price1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a74549f-43bb-4d86-a672-d2af567f7f31",
+      "comment": "",
+      "command": "echo",
+      "target": "second  item price: ${price2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e06d63e-d342-4571-b19f-130b5d404421",
+      "comment": "",
+      "command": "if",
+      "target": "${price1} >= ${price2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1208b5b7-dfbf-43e0-9755-ce66562c5ed6",
+      "comment": "",
+      "command": "echo",
+      "target": "price page(${page}) item ${item1} and   item ${item2} : RIGHT",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4fead9e-95aa-439d-bfc8-0a599006e2b3",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f37d9217-693c-48eb-b512-1f108648e11a",
+      "comment": "",
+      "command": "echo",
+      "target": "price page(${page}) item ${item1} and   item ${item2}  order: WORNG",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1ef60fd-c83c-4051-ab7b-ca1e34437382",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${order_ERRORS}+1",
+      "targets": [],
+      "value": "order_ERRORS"
+    }, {
+      "id": "d8156946-1a00-47cc-8f66-3d7340e9e7a9",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f603fc15-9da6-424d-b5ba-078ef1891707",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${item}+1",
+      "targets": [],
+      "value": "item1"
+    }, {
+      "id": "6f9678d7-913d-4525-9be4-bf07203712c3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${item}+1",
+      "targets": [],
+      "value": "item2"
+    }, {
+      "id": "f7409673-983d-4fca-ab6c-de197732df58",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ce47f83-fe67-4408-bb80-9a92fc7f81a7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${page}+1",
+      "targets": [],
+      "value": "page"
+    }, {
+      "id": "1f6c733f-d375-46fc-a805-224c923ce244",
+      "comment": "",
+      "command": "if",
+      "target": "${page}<6",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3959be59-45ee-4e0f-8a7b-95572761876b",
+      "comment": "",
+      "command": "echo",
+      "target": "go to page ${page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09201655-34ed-4d55-8e7c-49d88a4256a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-pagination__item:nth-child(${page}) > .c-pager__item",
+      "targets": [
+        ["linkText=۲", "linkText"],
+        ["css=.js-pagination__item:nth-child(2) > .c-pager__item", "css:finder"],
+        ["xpath=//a[contains(text(),'۲')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/div[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/search/?q=%D9%82%D9%84%D9%85&sortby=21&pageno=2')]", "xpath:href"],
+        ["xpath=//article/div/div[3]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c64c96d9-a2ea-4543-bcbc-2667bb08e5e5",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d51e8d90-1a98-45ad-adb5-239f527d5abc",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f800eb45-4168-4875-adf6-6d634f7d9c4e",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "367f7e2e-5b67-4f13-8405-d19a3eb8e775",
+      "comment": "",
+      "command": "echo",
+      "target": "keyword contain ERRORS ${contain_ERRORS}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1a814ce-0336-44de-a8a7-e7e2f4236e95",
+      "comment": "",
+      "command": "echo",
+      "target": "price order ERRORS ${order_ERRORS}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "818db525-da76-4dfa-b77a-67a04495aadc",
+    "name": "2",
+    "commands": [{
+      "id": "ddeed444-fbe6-46cb-be3b-12e92323267f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "088a9061-8a14-4280-ab36-3a9cdf436985",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d42f13e1-b84b-46fa-a23e-f47b60f10237",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.js-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "قلم"
+    }, {
+      "id": "be801dda-9be4-47d0-ac6a-346b407bede4",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.js-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "169570f7-8403-4976-a3c9-5f6cd8ebe9bd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=۲",
+      "targets": [
+        ["linkText=۲", "linkText"],
+        ["css=.js-pagination__item:nth-child(2) > .c-pager__item", "css:finder"],
+        ["xpath=//a[contains(text(),'۲')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/div[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/search/?q=%D9%82%D9%84%D9%85&sortby=22&pageno=2')]", "xpath:href"],
+        ["xpath=//article/div/div[3]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0bd67ff2-4f51-4636-bae4-7b8fafbe1acf",
+    "name": "3",
+    "commands": [{
+      "id": "99d0ccda-9f51-4bb0-87e7-61e569ca1a97",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56ced062-86f3-49a5-90ab-62fb65d98f7e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5242e8e4-a9b4-49dc-a362-e648fff3989a",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.js-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "قلم"
+    }, {
+      "id": "754f0ee1-d486-48e4-b9fc-53d2f95f41b1",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.js-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "2a0bac11-12da-413f-ad7d-09ceb9f1140b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=۲",
+      "targets": [
+        ["linkText=۲", "linkText"],
+        ["css=.js-pagination__item:nth-child(2) > .c-pager__item", "css:finder"],
+        ["xpath=//a[contains(text(),'۲')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/div[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/search/?q=%D9%82%D9%84%D9%85&sortby=22&pageno=2')]", "xpath:href"],
+        ["xpath=//article/div/div[3]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7caaa542-3ed8-4c1c-86d3-b908ab790ffd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=۳",
+      "targets": [
+        ["linkText=۳", "linkText"],
+        ["css=.js-pagination__item:nth-child(5) > .c-pager__item", "css:finder"],
+        ["xpath=//a[contains(text(),'۳')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/div[3]/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/search/?q=%D9%82%D9%84%D9%85&sortby=22&pageno=3')]", "xpath:href"],
+        ["xpath=//article/div/div[3]/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82d671ef-05b5-4dd5-8b9f-9673b57ec321",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=گران‌ترین",
+      "targets": [
+        ["linkText=گران‌ترین", "linkText"],
+        ["css=.c-listing__sort > li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'گران‌ترین')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/div[2]/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:')])[7]", "xpath:href"],
+        ["xpath=//article/div/div[2]/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'گران‌ترین')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67f53e4f-8fbd-407c-a78a-0c976d2b7319",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-pagination__item:nth-child(2) > .c-pager__item",
+      "targets": [
+        ["linkText=۲", "linkText"],
+        ["css=.js-pagination__item:nth-child(2) > .c-pager__item", "css:finder"],
+        ["xpath=//a[contains(text(),'۲')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/div/div[2]/div[2]/div/article/div/div[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/search/?q=%D9%82%D9%84%D9%85&sortby=21&pageno=2')]", "xpath:href"],
+        ["xpath=//article/div/div[3]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c12d4be4-a94a-4044-a0b1-5d974265cbd0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1846.54541015625)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2af9788a-a2c2-4a59-9165-0bba054b4567",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.digikala.com/"],
+  "plugins": []
+}
